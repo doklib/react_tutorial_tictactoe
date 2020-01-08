@@ -152,6 +152,7 @@ function Square(props) {
         );
       });
 
+      
       let status;
       if (winner) {
           status = 'Winner 승자: ' + winner;
@@ -160,6 +161,9 @@ function Square(props) {
       }
 
         //improvements no.4 Add a toggle button for sorting
+        if (!isAscending) {
+          moves.reverse();
+        }
       return (
         <div className="game">
           <div className="game-board">
